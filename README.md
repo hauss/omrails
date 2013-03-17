@@ -1,4 +1,3 @@
-# One Month Rails
+# Practice App
 
-This is the sample application for
-[*Personalized Books*](http://www.marblespark.com)
+This is a practice app in Ruby on Rails by [*Phil Haussler*](http://www.marblespark.com)
