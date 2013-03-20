@@ -1,10 +1,14 @@
-<div class="hero-unit">
-	<h1>Welcome to Fauxterist</h1>
-	<p>
-		It's like Pinterest (if it were built by a code rookie). I'm building it as part of 
-		<%= link_to "this", "http://www.skillshare.com/Teach-Yourself-to-Code-One-Month-Rails/1289605848/classroom/discussions" %> course.
-	</p>
-	<p>
-		<%= link_to "Sign Up Now!", "#", class: "btn btn-primary btn-large" %>
-	</p>
-</div>
+<% if user_signed_in? %>
+	<h1>Heyo! You're signed in!</h1>
+<% else %>
+	<div class="hero-unit">
+		<h1>Welcome to Fauxterist</h1>
+		<p>
+			It's like Pinterest (if it were built by a code rookie). I'm building it as part of 
+			<%= link_to "this", "http://www.skillshare.com/Teach-Yourself-to-Code-One-Month-Rails/1289605848/classroom/discussions" %> course.
+		</p>
+		<p>
+			<%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
+		</p>
+	</div>
+<% end %>
