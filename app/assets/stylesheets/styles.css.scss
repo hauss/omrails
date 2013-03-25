@@ -16,10 +16,12 @@ body {
 @import 'bootstrap-responsive';
 
 /*this gets rid of the drop shadow on the navbar*/
+/*
 .navbar-inner {
 	@include box-shadow(none !important);
 	border: 0;
 }
+*/
 
 .footer{
 	margin-top:50px;
