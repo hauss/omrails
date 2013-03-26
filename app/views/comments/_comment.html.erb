@@ -1,10 +1,18 @@
 <p>
-  <em><%= comment.body %></em></br>
-  <small><strong>~<%= User.find(comment.user_id).name %></strong></small>
+	<div class="showComment">
+	  <em><%= comment.body %></em></br>
+	  <small><strong>~<%= User.find(comment.user_id).name %></strong></small>
+	  <% if current_user.id == comment.user_id %>
+		  <p>
+			  <small>
+				  <%= link_to 'Delete Comment', [comment.pin, comment],
+				               :confirm => 'Are you sure?',
+				               :method => :delete %>
+			  </small>
+			</p>
+		<% end %>
+
+
+	</div>
 </p>
 
-<p>
-  <%= link_to 'Destroy Comment', [comment.pin, comment],
-               :confirm => 'Are you sure?',
-               :method => :delete %>
-</p>
