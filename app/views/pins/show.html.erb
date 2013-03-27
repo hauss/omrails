@@ -13,7 +13,7 @@
 			<% end %>
 			<%= link_to 'Back', pins_path %>
 			<h3>Comments</h3>
-			<%= render @pin.comments %>
+			<%= render @pin.comments("created_at asc") %>
 			<%= render "comments/form" %>
 
 		</div>
