@@ -6,7 +6,9 @@
 			  <%= @pin.description %>
 			</p>
 			<p>
-			  <%= @pin.user.name %>
+				<small>
+				  Posted by <%= link_to @pin.user.name, profile_path(@pin.user.id) %>
+				</small>
 			</p>
 			<% if current_user == @pin.user %>
 				<%= link_to 'Edit', edit_pin_path(@pin) %> |
@@ -14,7 +16,7 @@
 			<%= link_to 'Back', pins_path %>
 			<h3>Comments</h3>
 			<%= render @pin.comments %>
-			<%= render "comments/form" %>
+			<%= render :partial => "comments/form" %>
 
 		</div>
 	</div>
