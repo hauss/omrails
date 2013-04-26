@@ -7,7 +7,7 @@
 			</p>
 			<p>
 				<small>
-				  Posted by <%= link_to @pin.user.name, profile_path(@pin.user.id) %>
+				  Posted by <%= link_to @pin.user.name, @pin.user %>
 				</small>
 			</p>
 			<% if current_user == @pin.user %>
